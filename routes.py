@@ -1,13 +1,12 @@
 from flask import Flask
 import requests
 
-app = Flask("Teste")
+app = Flask("Projeto")
 
-@app.route("/Pessoa", methods=["GET"])
-def olaMundo():
-    return {"nome": "Karen Larissa Lima dos Santos",
-        "idade": "20",
-        "telefone": "984845619",
-        "status_req": "status"}
-        
+@app.route("/Dados", methods=["GET"])
+def info():
+    return {"Nome": "Karen Larissa Lima dos Santos",
+        "Idade": "20",
+        "Telefone": "984845619",
+        }
 app.run()
