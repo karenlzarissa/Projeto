@@ -1,14 +1,12 @@
-from flask import Flask
-import requests
-import jsonify
-import json
+from flask import Flask, jsonify
 
 app = Flask("Projeto")
 
 @app.route("/Dados", methods=["GET"])
 def info():
-    return {"Nome": "Karen Larissa Lima dos Santos",
-        "Idade": "20",
-        "Telefone": "984845619",
-        }
+    return jsonify({"Nome": "Karen Larissa Lima dos Santos",
+                    "Idade": "20",
+                    "Telefone": "984845619",
+           })
+           
 app.run()
